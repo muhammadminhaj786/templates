@@ -15,12 +15,6 @@ const envConfig = () => {
 const isBoolean = (value) =>
   ["true", "false"].includes(value) ? JSON.parse(value) : value;
 
-const getEnv = (name) => {
-  const value = process.env[name];
-  if (value === undefined) {
-    return undefined;
-  }
-  return isBoolean(value) ? JSON.parse(value) : value;
-};
+const getEnv = (name) => isBoolean(process.env[name]);
 
 export { getEnv, envConfig };
