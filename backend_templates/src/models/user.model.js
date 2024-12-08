@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import bcrypt, { genSaltSync } from 'bcryptjs'
+import bcrypt from "bcryptjs";
 
 
 export const userSchema = new mongoose.Schema({
