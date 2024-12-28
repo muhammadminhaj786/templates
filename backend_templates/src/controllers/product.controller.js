@@ -107,3 +107,19 @@ export const deleteProduct = async (req,res)=> {
         })
     }
 }
+
+//product views api
+export const productView = async (req,res)=> {
+    try {
+
+        const {id} = req.params;
+
+        const product = await Product.findById(id)
+        
+    } catch (error) {
+        return res.status(500).json({
+            message: "An error occurred while viewing product",
+            details: error.message
+        })
+    }
+}
