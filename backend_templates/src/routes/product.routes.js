@@ -12,6 +12,6 @@ productRoutes.get('/product/:id', getProductById);
 productRoutes.put('/product/:id', updateProduct);
 productRoutes.delete('/product/:id', deleteProduct);
 
-productRoutes.post('product-view', productView);
+productRoutes.post('/product-view', productView);
 
 export default productRoutes;
