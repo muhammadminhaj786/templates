@@ -123,3 +123,19 @@ export const productView = async (req,res)=> {
         })
     }
 }
+
+// search product
+export const searchProduct =(req,res)=>{
+     try {
+
+        const {name} = req.query
+        
+        // const product = Product.find
+        
+     } catch (error) {
+        return res.status(500).json({
+            message: 'An error occurred while searching product',
+            details: error.message
+        })
+     }
+}
